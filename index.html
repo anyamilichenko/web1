@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head lang="ru-RU">
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;700&display=swap">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <title>Лабораторная работа №1 | Веб-программирование</title>
+</head>
+
+<body>
+
+    <div class = "header">
+        <h1>Миличенко Анна Евгеньевна P3210</h1>
+    </div>
+    <div class="area">
+        <img src="area.jpg" >
+        <canvas id="canvas" width = "0px" height = "0px"></canvas>
+    </div>
+
+
+    <div class="main">
+        <label id ="label_x">X = -2</label>
+        <label for="X"></label><select id="X" onchange="set_x()">
+            <option value="-4" id="opm4">-4</option>
+            <option value="-3" id="opm3">-3</option>
+            <option value="-2" id="opm2">-2</option>
+            <option value="-1" id="opm1">-1</option>
+            <option value="0" id="op0">0</option>
+            <option value="1" id="op1">1</option>
+            <option value="2" id="op2">2</option>
+            <option value="3" id="op3">3</option>
+            <option value="4" id="op4">4</option>
+        </select>
+        <p></p>
+        <label id = "label_y"> Y = </label>
+        <label for="Y"></label><input id="Y" type="text" name="y" placeholder="(-3 .. 5)" maxlength="9"><br>
+        <p></p>
+        <label for="b1" id = "label_r">R = </label>
+        <div class="R_buttons">
+            <button type="button" value="1" id="b1" name="X" onclick="set_R_value(id)">1</button>
+            <button type="button" value="2" id="b2" name="X" onclick="set_R_value(id)">2</button>
+            <button type="button" value="3" id="b3" name="X" onclick="set_R_value(id)">3</button>
+            <button type="button" value="4" id="b4" name="X" onclick="set_R_value(id)">4</button>
+            <button type="button" value="5" id="b5" name="X" onclick="set_R_value(id)">5</button>
+        </div>
+        <!-- Кнопки "Очистить" и "Проверить" -->
+    <div class="action_buttons">
+            <!-- Кнопка "Очистить" -->
+<!--        <button id="clearButton" type="button">Очистить</button>-->
+
+            <!-- Форма для отправки параметров методом GET -->
+        <form action="server.php" method="GET">
+                <!-- Кнопка "Ввод значений" -->
+            <button type="button" id="button" name="out_button">Ввод параметров</button>
+        </form>
+    </div>
+
+    <div class="foot">
+        <td colspan="2">
+            <table class="result-table">
+                <thead>
+                <td>X</td>
+                <td>Y</td>
+                <td>R</td>
+                <td>RESULT</td>
+                <td>Current time</td>
+                <td>Computation time</td>
+                </thead>
+                <tbody id="table_out">
+                </tbody>
+            </table>
+        </td>
+    </div>
+
+    <script type="text/javascript" src="JS/out.js"></script>
+    <script type="text/javascript" src="JS/validation.js"></script>
+    <script type="text/javascript" src="JS/addToTable.js"></script>
+    <script type="text/javascript" src="JS/grafic.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+
+/* Основные цвета */
+:root {
+    --main-color1: #9880b6; /* Фиолетовый */
+    --main-color2: #77a873; /* Зеленый */
+    --main-color3: #cc6fc4; /* Розовый */
+}
+
+/* Общий стиль для всех блоков */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.adf   + .button{
+
+}
+
+/* Заголовок */
+.header {
+    text-align: center;
+    color: var(--main-color1);
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.area {
+    text-align: center; /* Центрирование содержимого */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.area img {
+    max-width: 100%; /* Максимальная ширина изображения равна 100% от родительского блока */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border: 2px solid var(--main-color1); /* Бордюр с фиолетовым цветом */
+    border-radius: 10px; /* Скругление углов бордюра */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+/* Выбор различных значений */
+.main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--main-color2);
+}
+
+#label_x, #label_y {
+    color: var(--main-color3);
+}
+
+/* Кнопки выбора R */
+.R_buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: var(--main-color1);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.R_buttons button:hover {
+    background-color: rgba(152, 128, 182, 0.9); /* 90% прозрачности */
+}
+
+.R_buttons button.active {
+    background-color: rgba(152, 128, 182, 0.5); /* 50% прозрачности */
+}
+
+
+
+/* Кнопки "Очистить" и "Ввод параметров" */
+.action_buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--main-color2);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.action_buttons button:hover {
+    background-color: rgba(119, 168, 115, 0.9); /* Затемненный зеленый с 90% прозрачности */
+}
+
+.action_buttons button:active {
+    background-color: rgba(119, 168, 115, 0.8); /* Затемненный зеленый с 80% прозрачности */
+}
+
+/* Таблица с результатами */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.result-table th, .result-table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+.result-table th {
+    background-color: var(--main-color3);
+    color: #ffffff;
+}
+
+.result-table tbody tr:nth-child(even) {
+    background-color: #a3c0a0;
+}
+
+/* общий фон и цвета к сайту */
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #f9f9f9;
+}
+
+.plot, .main, .foot {
+    background-color: white;
+}
+
+.foot {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--main-color1);
+    color: white;
+}
+
+/* для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
